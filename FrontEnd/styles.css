@@ -1,0 +1,320 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+
+body {
+    font-family: "Lora", serif;
+}
+
+.header {
+    background: url('/FrontEnd/img/Header Sergio Diaz Web Developer.png') no-repeat;
+    background-size: cover;
+    color: white;
+    padding: 100px 0;
+    height: 85vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: center;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.profile-img {
+    width: 150px;
+    height: auto;
+    border-radius:90px;
+}
+
+.info h1, #footerTittle{
+    font-family: "Great Vibes", cursive;
+    font-weight: 400;
+    font-size: 3.5em;
+}
+
+
+.info p {
+    font-size: 1.2em;
+    margin-bottom: 0.5em;
+}
+
+.list-inline-item {
+    font-size: 1em;
+    color: white;
+}
+
+.list-inline-item a {
+    color: white;
+    text-decoration: none;
+}
+
+.list-inline-item a:hover {
+    text-decoration: underline;
+}
+
+.timeline {
+    position: relative;
+    margin: 0;
+    padding: 20px 0;
+    list-style: none;
+}
+
+.timeline:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: var(--gold);
+    left: 20%;
+    margin-left: -1px;
+}
+
+.timeline > li {
+    position: relative;
+    margin-bottom: 50px;
+    padding-left: 40px;
+}
+
+.timeline > li .timeline-panel {
+    position: relative;
+    width: 70%;
+    padding: 20px;
+    text-align: left;
+    border-radius: 6px;
+    background: #fff;
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
+    margin-left: 25%;
+}
+
+.timeline > li .timeline-badge {
+    color: var(--gold);
+    width: 20px;
+    height: 20px;
+    line-height: 18px;
+    font-size: 1em;
+    text-align: center;
+    position: absolute;
+    top: 0;
+    left: 20%;
+    margin-left: -10px;
+    background-color: var(--gold);
+    z-index: 100;
+    border-radius: 50%;
+}
+
+.timeline > li .timeline-panel:before {
+    content: " ";
+    position: absolute;
+    top: 20px;
+    right: 100%;
+    border-top: 10px solid transparent;
+    border-right: 10px solid #fff;
+    border-bottom: 10px solid transparent;
+    border-left: 0 solid #fff;
+    display: block;
+    width: 0;
+}
+
+#about .btn-primary{
+    color: white;
+    background-color:var(--gold);
+    border-radius: 20px;
+    border-color: var(--gold);
+}
+
+#about .btn-primary:hover{
+    color: var(--gold);
+    background-color:white;
+    border: hidden;
+}
+
+#portfolio .btn-primary{
+    color: var(--navy_blue);
+    background-color:white;
+    border: hidden;
+}
+
+#portfolio .btn-primary:hover{
+    color: white;
+    background-color:var(--gold);
+    border: hidden;
+}
+
+.portfolio-item {
+    margin-bottom: 50px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.portfolio-item h3 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+.portfolio-item p {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.portfolio-item a {
+    margin-top: 10px;
+    display: flex;
+    justify-content: end;
+    
+}
+
+.carousel-inner img {
+    height: 400px;
+    object-fit: cover;
+}
+
+.carousel-control-prev:hover, .carousel-control-next:hover{
+    filter: drop-shadow(
+        0 0 10px rgba(0, 0, 0, .8)
+    );
+}
+
+
+
+.tech-stack-item {
+    display: inline-block;
+    padding: 5px 10px;
+    margin: 5px;
+    font-size: 0.9em;
+    color: black;
+    background-color: white; /* Color de fondo */
+    border-style:hidden;
+    border-width: 1px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 5px grey;
+}
+
+@media (max-width: 768px) {
+    .timeline:before {
+        left: 10%;
+    }
+    .timeline > li {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .timeline > li .timeline-panel {
+        width: calc(100% - 40px);
+        margin-left: 10%;
+    }
+    .timeline > li .timeline-badge {
+        left: 10%;
+    }
+    .timeline > li .timeline-panel:before {
+        left: -10px;
+        border-top: 10px solid transparent;
+        border-right: 0 solid #fff;
+        border-bottom: 10px solid transparent;
+        border-left: 10px solid #fff;
+    }
+}
+
+.footer {
+    background-color: var(--midnight);
+}
+
+.footer-title {
+    font-family: 'Times New Roman', serif;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.footer .list-inline-item a {
+    font-size: 1.5rem;
+    transition: color 0.3s;
+}
+
+.footer .list-inline-item a:hover {
+    color: var(--gold);
+}
+
+
+.card {
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-title {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.card-text {
+    margin-bottom: 15px;
+}
+
+.card-body {
+    padding: 20px;
+}
+
+
+.navbar-nav .nav-item .nav-link {
+    transition: color 0.3s ease-in-out;
+}
+
+.navbar-nav .nav-item .nav-link.active {
+    color: var(--gold); 
+}
+
+
+
+#contact-form {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+#contact-form .form-group {
+    margin-bottom: 20px;
+}
+
+
+#contact-form label {
+    font-weight: bold;
+}
+
+#contact-form textarea {
+    resize: vertical;
+}
+
+#contact-form button[type="submit"] {
+    background-color: var(--gold);
+    color: #fff;
+    border: none;
+    padding: 10px 30px;
+    font-size: 1.1em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#contact-form button[type="submit"]:hover {
+    background-color: var(--sand);
+}
+
+
+:root{
+    --gold:#d4af37;
+    --midnight: #010114;
+    --sand:#a48a29;
+    --navy_blue:#01026d;
+}
