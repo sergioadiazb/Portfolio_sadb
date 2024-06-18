@@ -1,12 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Lora:ital,wght@0,400..700;1,400..700&family=Trispace:wght@100..800&display=swap');
+
 
 body {
     font-family: "Lora", serif;
 }
 
 .header {
-    background: url('/FrontEnd/img/Header Sergio Diaz Web Developer.png') no-repeat;
+    background: url('../FrontEnd/img/Header Sergio Diaz Web Developer.png') no-repeat;
     background-size: cover;
     color: white;
     padding: 100px 0;
@@ -162,12 +162,6 @@ body {
     line-height: 1.5;
 }
 
-.portfolio-item a {
-    margin-top: 10px;
-    display: flex;
-    justify-content: end;
-    
-}
 
 .carousel-inner img {
     height: 400px;
@@ -195,47 +189,23 @@ body {
     box-shadow: 1px 1px 5px grey;
 }
 
-@media (max-width: 768px) {
-    .timeline:before {
-        left: 10%;
-    }
-    .timeline > li {
-        padding-left: 0;
-        padding-right: 0;
-    }
-    .timeline > li .timeline-panel {
-        width: calc(100% - 40px);
-        margin-left: 10%;
-    }
-    .timeline > li .timeline-badge {
-        left: 10%;
-    }
-    .timeline > li .timeline-panel:before {
-        left: -10px;
-        border-top: 10px solid transparent;
-        border-right: 0 solid #fff;
-        border-bottom: 10px solid transparent;
-        border-left: 10px solid #fff;
-    }
-}
-
 .footer {
     background-color: var(--midnight);
+    color: white;
 }
 
-.footer-title {
-    font-family: 'Times New Roman', serif;
+
+.footer .list-inline-item a, .info .list-inline-item i {
     font-size: 1.5rem;
-    margin-bottom: 1rem;
 }
 
-.footer .list-inline-item a {
-    font-size: 1.5rem;
+.footer .list-inline-item i, .info .list-inline-item i {
+    color: gray;
     transition: color 0.3s;
 }
 
-.footer .list-inline-item a:hover {
-    color: var(--gold);
+.footer .list-inline-item i:hover, .info .list-inline-item i:hover {
+    color: white;
 }
 
 
@@ -309,6 +279,50 @@ body {
 
 #contact-form button[type="submit"]:hover {
     background-color: var(--sand);
+}
+
+strong{
+    font-family: "Trispace", sans-serif;
+}
+
+@media (max-width: 768px) {
+
+    .header-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    .profile-img {
+        width: 100px;
+        margin-bottom: 20px;
+    }
+    .info h1 {
+        font-size: 2.5em;
+    }
+    .info p {
+        font-size: 1em;
+    }
+
+    .timeline:before {
+        left: 10%;
+    }
+    .timeline > li {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .timeline > li .timeline-panel {
+        width: calc(100% - 40px);
+        margin-left: 10%;
+    }
+    .timeline > li .timeline-badge {
+        left: 10%;
+    }
+    .timeline > li .timeline-panel:before {
+        left: -10px;
+        border-top: 10px solid transparent;
+        border-right: 0 solid #fff;
+        border-bottom: 10px solid transparent;
+        border-left: 10px solid #fff;
+    }
 }
 
 

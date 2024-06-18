@@ -1,20 +1,3 @@
-
-document.getElementById('contact-form').addEventListener('submit', function (event) {
-    event.preventDefault();
-    
-    let name = document.getElementById('name').value.trim();
-    let email = document.getElementById('email').value.trim();
-    let message = document.getElementById('message').value.trim();
-    
-    if (name === "" || email === "" || message === "") {
-        document.getElementById('form-message').innerText = 'Por favor, completa todos los campos.';
-        return;
-    }
-    
-    document.getElementById('form-message').innerText = '¡Mensaje enviado con éxito!';
-    document.getElementById('contact-form').reset();
-});
-
 document.addEventListener("DOMContentLoaded", function() {
     document.addEventListener("scroll", function() {
         var sections = document.querySelectorAll("section");
@@ -33,4 +16,15 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
     document.querySelector('.navbar-nav .nav-item .nav-link').classList.add("active");
+    document.getElementById('contact-form').addEventListener('submit', function (event) {
+        event.preventDefault();
+    
+        document.getElementById('form-message').innerText = '¡Mensaje enviado con éxito!';
+        
+        setTimeout(function() {
+            document.getElementById('contact-form').reset();
+            document.getElementById('form-message').innerText = ''; 
+        }, 2000); 
+    });
 });
+
