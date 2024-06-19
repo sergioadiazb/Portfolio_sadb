@@ -14,17 +14,5 @@ document.addEventListener("DOMContentLoaded", function() {
             }
         });
     });
-
-    document.querySelector('.navbar-nav .nav-item .nav-link').classList.add("active");
-    document.getElementById('contact-form').addEventListener('submit', function (event) {
-        event.preventDefault();
-    
-        document.getElementById('form-message').innerText = '¡Mensaje enviado con éxito!';
-        
-        setTimeout(function() {
-            document.getElementById('contact-form').reset();
-            document.getElementById('form-message').innerText = ''; 
-        }, 2000); 
-    });
 });
 
